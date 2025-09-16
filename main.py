@@ -1,5 +1,5 @@
 from astrbot.api.event import filter, AstrMessageEvent
-from astrbot.api.star import Context, Star, register
+from astrbot.api.star import Context, Star
 from astrbot.api import logger
 from typing import Optional
 import asyncio
@@ -11,7 +11,6 @@ class ApifoxModel:
         self.flag = flag
         self.reason = reason
 
-@register("astrbot_plugin_appreview", "qiqi", "一个可以通过关键词来同意或拒绝进入群聊的插件", "1.2.0")
 class AppReviewPlugin(Star):
     def __init__(self, context: Context, config=None):
         super().__init__(context)
